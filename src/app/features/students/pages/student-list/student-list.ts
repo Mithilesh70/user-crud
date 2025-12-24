@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { Router } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { TruncatePipe } from '../../../../shared/truncate.pipe';
 
 @Component({
   selector: 'app-student-list',
@@ -19,6 +20,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatChipsModule,
     MatTooltipModule,
+    TruncatePipe,
   ],
   templateUrl: './student-list.html',
   styleUrl: './student-list.scss',

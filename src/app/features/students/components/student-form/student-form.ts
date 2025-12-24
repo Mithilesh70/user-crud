@@ -49,7 +49,7 @@ export class StudentForm implements OnInit {
     this.form = this.fb.nonNullable.group({
       id: [0],
       name: ['', [Validators.required, Validators.maxLength(50)]],
-      email: ['', [Validators.required, Validators.email, Validators.maxLength(254)]],
+      email: ['', [Validators.required, Validators.email, Validators.maxLength(70)]],
       gender: ['male', Validators.required],
       course: ['', Validators.required],
       skills: this.fb.nonNullable.control<string[]>([]),
