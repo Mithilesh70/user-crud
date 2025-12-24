@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rewardz-assignment": {
+    "user-crud": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "rewardz-assignment:build:production"
+              "buildTarget": "user-crud:build:production"
             },
             "development": {
-              "buildTarget": "rewardz-assignment:build:development"
+              "buildTarget": "user-crud:build:development"
             }
           },
           "defaultConfiguration": "development"

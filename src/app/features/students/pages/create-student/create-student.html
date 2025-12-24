@@ -1,0 +1,6 @@
+<div class="page-header">
+  <h2>{{ isEditMode ? 'Edit Student' : 'Create Student' }}</h2>
+
+  <button mat-stroked-button color="primary" (click)="goToList()">View Student List</button>
+</div>
+<app-student-form [student]="selectedStudent" (submitStudent)="onSubmit($event)"></app-student-form>
