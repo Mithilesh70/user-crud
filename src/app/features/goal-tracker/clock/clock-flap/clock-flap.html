@@ -1,0 +1,29 @@
+<div class="clock">
+  <div class="digit">
+    <div class="card">
+      <span class="half top static">
+        <span class="value">{{ leftDigit() }}</span>
+      </span>
+      <span class="half bottom static">
+        <span class="value">{{ leftDigit() }}</span>
+      </span>
+      <span class="half top flap" [class.flip]="animateLeft()">
+        <span class="value">{{ prevLeft() }}</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="digit">
+    <div class="card">
+      <span class="half top static">
+        <span class="value">{{ rightDigit() }}</span>
+      </span>
+      <span class="half bottom static">
+        <span class="value">{{ rightDigit() }}</span>
+      </span>
+      <span class="half top flap" [class.flip]="animateRight()">
+        <span class="value">{{ prevRight() }}</span>
+      </span>
+    </div>
+  </div>
+</div>

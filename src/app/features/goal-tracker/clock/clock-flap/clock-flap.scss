@@ -1,0 +1,96 @@
+.clock {
+  display: flex;
+  gap: 12px;
+}
+
+.digit {
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 70px;
+  height: 100px;
+  background: #0f0f10;
+  color: white;
+  font-size: 64px;
+  font-weight: 700;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-0.5px);
+  background: rgb(255 255 255 / 8%);
+  z-index: 4;
+}
+
+.half {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.top {
+  top: 0;
+  align-items: flex-start;
+  background: linear-gradient(#252629, #191a1d);
+  transform-origin: bottom;
+}
+
+.bottom {
+  bottom: 0;
+  align-items: flex-start;
+  background: linear-gradient(#060607, #000);
+}
+
+.static {
+  z-index: 1;
+}
+
+.value {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 100px;
+}
+
+.bottom .value {
+  transform: translateY(-50px);
+}
+
+.flap {
+  z-index: 3;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.flap.flip {
+  opacity: 1;
+  animation: flipTop 0.46s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes flipTop {
+  from {
+    transform: rotateX(0deg);
+    filter: brightness(1);
+  }
+
+  to {
+    transform: rotateX(-90deg);
+    filter: brightness(0.72);
+  }
+}

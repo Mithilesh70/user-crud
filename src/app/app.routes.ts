@@ -3,8 +3,12 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'students/create',
+    redirectTo: 'goal-tracker',
     pathMatch: 'full',
+  },
+  {
+    path: 'goal-tracker',
+    loadComponent: () => import('./features/goal-tracker/goal-tracker').then((m) => m.GoalTracker),
   },
   {
     path: 'students',
